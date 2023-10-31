@@ -15,6 +15,7 @@ const getText = (imc) => {
 }
 
  const imcCalc = () => {
+    if(!peso.value || !altura.value || !nome.value) return resultado.textContent = 'Preencha todos os campos';
     const valorImc = (+peso.value / (+altura.value * +altura.value)).toFixed(1);
     resultado.textContent = getText(valorImc);
  }
